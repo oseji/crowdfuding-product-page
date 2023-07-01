@@ -560,9 +560,9 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.border-x-2 {
-  border-left-width: 2px;
-  border-right-width: 2px;
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
 }
 
 .border-slate-800 {
@@ -583,42 +583,44 @@ video {
   text-transform: capitalize;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-75 {
-  opacity: 0.75;
-}
-
-.opacity-30 {
-  opacity: 0.3;
-}
-
-.opacity-90 {
-  opacity: 0.9;
-}
-
-.opacity-10 {
-  opacity: 0.1;
-}
-
-.opacity-25 {
-  opacity: 0.25;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.open {
+  height: auto;
+}
+
+.close {
+  display: none;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .close {
+    visibility: visible;
+  }
+}
+
 .navContainer {
+  display: flex;
   height: 10rem;
   width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   background-image: url('/images/image-hero-mobile.jpg');
   background-size: contain;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 @media (min-width: 1024px) {
@@ -632,16 +634,51 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px) {
+  .navbar {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.logoAndMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .logoAndMenu {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
 .navLogo {
   height: 1.25rem;
+}
+
+.hamburger {
+  height: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .navList {
@@ -663,10 +700,14 @@ html {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+  width: 100%;
   padding: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 50%;
+  }
 }
 
 .subContainer {
@@ -714,13 +755,29 @@ html {
 .numTable {
   margin-bottom: 2.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1.25rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .numTable {
+    flex-direction: row;
+  }
 }
 
 .numGrp {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .numGrp {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .num {
@@ -772,8 +829,14 @@ html {
 .rewardBottomGrp {
   margin-top: 1.75rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .rewardBottomGrp {
+    flex-direction: row;
+  }
 }
 
 .daysLeftNum {
@@ -800,4 +863,16 @@ html {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .lg\:border-x-2 {
+    border-left-width: 2px;
+    border-right-width: 2px;
+  }
+
+  .lg\:border-y-0 {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+  }
 }

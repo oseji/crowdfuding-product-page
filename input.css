@@ -6,16 +6,36 @@ html {
   @apply scroll-smooth;
 }
 
+body {
+  @apply bg-slate-200;
+}
+
+.open {
+  @apply h-auto;
+}
+
+.close {
+  @apply hidden lg:visible overflow-hidden;
+}
+
 .navContainer {
-  @apply bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-40 w-full;
+  @apply flex flex-row justify-between items-start bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-40 w-full px-5;
 }
 
 .navbar {
-  @apply flex flex-row  justify-between items-center px-24 py-5 text-white;
+  @apply flex flex-row  justify-between items-center px-5 py-2 lg:px-24 lg:py-5 text-white;
+}
+
+.logoAndMenu {
+  @apply flex flex-row justify-between items-center py-2 lg:py-5;
 }
 
 .navLogo {
   @apply h-5;
+}
+
+.hamburger {
+  @apply h-4 lg:hidden;
 }
 
 .navList {
@@ -24,7 +44,7 @@ html {
 
 /*CONTAINER*/
 .container {
-  @apply w-1/2 mx-auto bg-yellow-200 p-5;
+  @apply w-full lg:w-1/2 mx-auto p-5;
 }
 
 .subContainer {
@@ -48,11 +68,11 @@ html {
 }
 
 .numTable {
-  @apply flex flex-row gap-5 mb-10;
+  @apply flex flex-col lg:flex-row gap-5 mb-10 text-center;
 }
 
 .numGrp {
-  @apply px-7;
+  @apply px-7 py-5 lg:py-0;
 }
 
 .num {
@@ -84,7 +104,7 @@ html {
 }
 
 .rewardBottomGrp {
-  @apply flex flex-row justify-between mt-7;
+  @apply flex flex-col lg:flex-row justify-between mt-7;
 }
 
 .daysLeftNum {
