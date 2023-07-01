@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+
+.navContainer {
+  @apply bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-40 w-full;
+}
+
+.navbar {
+  @apply flex flex-row  justify-between items-center px-24 py-5 text-white;
+}
+
+.navLogo {
+  @apply h-5;
+}
+
+.navList {
+  @apply flex flex-col lg:flex-row gap-5 text-sm;
+}
+
+/*CONTAINER*/
+.container {
+  @apply w-1/2 mx-auto bg-yellow-200 p-5;
+}
+
+.subContainer {
+  @apply bg-white py-10 px-5 mb-6 rounded-lg;
+}
+
+.heading {
+  @apply font-bold mb-5;
+}
+
+.text {
+  @apply text-slate-400;
+}
+
+.containerGrp {
+  @apply flex flex-row justify-between items-center mt-5;
+}
+
+.btn {
+  @apply text-white font-semibold bg-emerald-600 px-8 py-2 rounded-full;
+}
+
+.numTable {
+  @apply flex flex-row gap-5 mb-10;
+}
+
+.numGrp {
+  @apply px-7;
+}
+
+.num {
+  @apply text-2xl font-bold;
+}
+
+.progressBar {
+  @apply h-4 w-full bg-slate-600 rounded-full;
+}
+
+.rewardBox {
+  @apply border border-slate-400 rounded-lg p-5 mb-4;
+}
+
+.rewardHeadingGrp {
+  @apply flex justify-between items-center mb-5;
+}
+
+.rewardHeading {
+  @apply capitalize font-bold;
+}
+
+.reward {
+  @apply text-emerald-400 font-semibold;
+}
+
+.rewardText {
+  @apply text-slate-400;
+}
+
+.rewardBottomGrp {
+  @apply flex flex-row justify-between mt-7;
+}
+
+.daysLeftNum {
+  @apply font-bold text-2xl;
+}
+
+.daysLeftText {
+  @apply text-sm text-slate-400;
+}
+
+.selectReward {
+  @apply text-white font-semibold bg-emerald-600 px-8 py-2 rounded-full;
+}
