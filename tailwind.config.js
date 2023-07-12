@@ -15,6 +15,9 @@ module.exports = {
         "45/100": "45%",
         "4/10": "40%",
       },
+      maxWidth: {
+        "1/2": "50%",
+      },
       backgroundImage: {
         bgDesktop: `url('/images/image-hero-desktop.jpg')`,
         bgMobile: `url('/images/image-hero-mobile.jpg')`,
