@@ -14,6 +14,14 @@ body {
   @apply opacity-60;
 }
 
+.close {
+  @apply h-0 overflow-hidden  transition ease-in-out duration-200;
+}
+
+.reveal {
+  @apply h-auto overflow-visible transition ease-in-out duration-200;
+}
+
 #modal {
   @apply lg:w-1/2 p-7 rounded-lg;
 }
@@ -46,6 +54,18 @@ body {
   @apply flex gap-5 items-start;
 }
 
+.enterPledge {
+  @apply flex justify-between items-center px-5 pt-5 mt-5 border-t border-slate-300 transition-all ease-in-out duration-200;
+}
+
+.pledgeSelection {
+  @apply flex gap-4;
+}
+
+.pledgeInput {
+  @apply border border-emerald-600 px-2 py-1 w-20 rounded-full;
+}
+
 .titleGrp {
   @apply flex justify-between items-start;
 }
@@ -62,8 +82,24 @@ body {
   @apply text-emerald-500 font-semibold;
 }
 
+.btnPledge {
+  @apply text-sm;
+}
+
 .check {
-  @apply mt-2;
+  @apply mt-2 cursor-pointer;
+}
+
+.completedModal {
+  @apply w-1/3 p-7 rounded-lg;
+}
+
+.completedHeading {
+  @apply font-bold text-xl py-3 text-center;
+}
+
+.completedIcon {
+  @apply mx-auto pb-6 block;
 }
 
 /*#modal::backdrop {
@@ -152,7 +188,7 @@ body {
 }
 
 .rewardHeading {
-  @apply capitalize font-bold;
+  @apply capitalize font-bold hover:cursor-pointer;
 }
 
 .reward {

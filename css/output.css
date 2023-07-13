@@ -556,12 +556,21 @@ video {
   }
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
 .mb-7 {
   margin-bottom: 1.75rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -588,6 +597,10 @@ video {
 .border-slate-800 {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -653,6 +666,26 @@ body {
   opacity: 0.6;
 }
 
+.close {
+  height: 0px;
+  overflow: hidden;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal {
+  height: auto;
+  overflow: visible;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 #modal {
   border-radius: 0.5rem;
   padding: 1.75rem;
@@ -701,6 +734,39 @@ body {
   gap: 1.25rem;
 }
 
+.enterPledge {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.25rem;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pledgeSelection {
+  display: flex;
+  gap: 1rem;
+}
+
+.pledgeInput {
+  width: 5rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(5 150 105 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .titleGrp {
   display: flex;
   align-items: flex-start;
@@ -725,8 +791,36 @@ body {
   color: rgb(16 185 129 / var(--tw-text-opacity));
 }
 
+.btnPledge {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .check {
   margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.completedModal {
+  width: 33.333333%;
+  border-radius: 0.5rem;
+  padding: 1.75rem;
+}
+
+.completedHeading {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.completedIcon {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-bottom: 1.5rem;
 }
 
 /*#modal::backdrop {
@@ -965,6 +1059,10 @@ body {
 .rewardHeading {
   font-weight: 700;
   text-transform: capitalize;
+}
+
+.rewardHeading:hover {
+  cursor: pointer;
 }
 
 .reward {
