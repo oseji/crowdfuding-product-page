@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 html {
   @apply scroll-smooth;
 }
@@ -43,11 +51,19 @@ body {
 }
 
 .closeModal {
-  @apply h-3 cursor-pointer hover:scale-150 transition ease-in-out duration-200;
+  @apply h-4 cursor-pointer hover:scale-150 transition ease-in-out duration-300;
 }
 
 .pledgeBox {
-  @apply border border-slate-300 rounded-lg p-5 mb-5;
+  @apply border rounded-lg p-5 mb-5;
+}
+
+.pledgeBorderInactive {
+  @apply border-slate-300;
+}
+
+.pledgeBorderActive {
+  @apply border-emerald-500;
 }
 
 .pledgeHead {
@@ -63,7 +79,7 @@ body {
 }
 
 .pledgeInput {
-  @apply border border-emerald-600 px-2 py-1 w-20 rounded-full;
+  @apply border border-emerald-600 px-2 py-1 w-20 rounded-full text-center;
 }
 
 .titleGrp {
@@ -91,7 +107,7 @@ body {
 }
 
 .completedModal {
-  @apply w-1/3 p-7 rounded-lg;
+  @apply w-95/100 lg:w-1/3 p-7 rounded-lg;
 }
 
 .completedHeading {
@@ -160,7 +176,7 @@ body {
 }
 
 .btn {
-  @apply text-white font-semibold bg-emerald-600 px-8 py-2 rounded-full hover:scale-110 transition ease-in-out duration-200;
+  @apply w-7/12 lg:w-auto text-white font-semibold bg-emerald-600 px-8 py-4 lg:py-2 rounded-full hover:scale-110 transition ease-in-out duration-300;
 }
 
 .numTable {
@@ -184,7 +200,7 @@ body {
 }
 
 .rewardHeadingGrp {
-  @apply flex justify-between items-center mb-5;
+  @apply flex flex-col lg:flex-row justify-between items-start lg:items-center mb-5;
 }
 
 .rewardHeading {
@@ -200,11 +216,11 @@ body {
 }
 
 .rewardBottomGrp {
-  @apply flex flex-col lg:flex-row justify-between mt-7;
+  @apply flex flex-col gap-5 lg:gap-0 lg:flex-row justify-between mt-7;
 }
 
 .daysLeftNum {
-  @apply font-bold text-2xl;
+  @apply font-bold text-4xl lg:text-2xl;
 }
 
 .daysLeftText {
