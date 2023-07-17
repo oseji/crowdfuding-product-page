@@ -31,6 +31,10 @@ const pledgeBtn200 = document.getElementById("pledge200btn");
 const pledgeUnlimitedBtn = document.getElementById("pledgeUnlimitedBtn");
 const btnPledge = document.querySelectorAll(".btnPledge");
 
+const navbar = document.querySelector(".navbar");
+const menuBtn = document.querySelector(".hamburger");
+const menu = document.querySelector(".navList ");
+
 console.log(
   check1,
   check2,
@@ -39,6 +43,15 @@ console.log(
   document.getElementById("enterPledge1"),
   allChecks
 );
+
+//TOGGLING NAV MENU
+menuBtn.addEventListener("click", () => {
+  navbar.classList.toggle("closeNav");
+  navbar.classList.toggle("open");
+
+  menu.classList.toggle("closeNav");
+  menu.classList.toggle("open");
+});
 
 //OPENING PLEDGE MODAL
 openModal.addEventListener("click", () => {

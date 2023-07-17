@@ -71,11 +71,11 @@ body {
 }
 
 .enterPledge {
-  @apply flex justify-between items-center px-5 pt-5 mt-5 border-t border-slate-300 transition-all ease-in-out duration-200;
+  @apply flex justify-between flex-col lg:flex-row gap-5 lg:gap-0 items-center px-5 pt-5 mt-5 border-t border-slate-300 transition-all ease-in-out duration-200;
 }
 
 .pledgeSelection {
-  @apply flex gap-4;
+  @apply flex gap-4 justify-center;
 }
 
 .pledgeInput {
@@ -83,7 +83,11 @@ body {
 }
 
 .titleGrp {
-  @apply flex justify-between items-start;
+  @apply flex justify-between items-start mb-4;
+}
+
+.pledgeTitleGrp {
+  @apply flex flex-col lg:flex-row gap-1 lg:gap-4;
 }
 
 .pledgeNum {
@@ -91,7 +95,7 @@ body {
 }
 
 .pledgeTitle {
-  @apply font-bold mb-4 cursor-pointer;
+  @apply font-bold  lg:mb-4 cursor-pointer;
 }
 
 .pledgeAmount {
@@ -126,20 +130,21 @@ body {
   @apply h-auto;
 }
 
-.close {
-  @apply hidden lg:visible overflow-hidden;
+.closeNav {
+  @apply h-0 lg:h-auto overflow-hidden;
 }
 
+/*NAVBAR*/
 .navContainer {
-  @apply flex flex-row justify-between items-start bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-40 w-full px-5;
+  @apply flex flex-col lg:flex-row lg:justify-between justify-start gap-5 lg:gap-0 items-start bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-64 lg:h-40 w-full px-5 py-5 lg:py-2;
 }
 
 .navbar {
-  @apply flex flex-row  justify-between items-center px-5 py-2 lg:px-24 lg:py-5 text-white;
+  @apply w-full lg:w-auto flex flex-row  justify-between items-center px-5 py-2 lg:px-24 lg:py-5 text-white transition ease-in-out duration-300;
 }
 
 .logoAndMenu {
-  @apply flex flex-row justify-between items-center py-2 lg:py-5;
+  @apply w-full lg:w-auto flex flex-row justify-between items-center py-2 lg:py-5;
 }
 
 .navLogo {
@@ -151,7 +156,11 @@ body {
 }
 
 .navList {
-  @apply flex flex-col lg:flex-row gap-5 text-sm;
+  @apply w-full lg:w-auto flex flex-col lg:flex-row items-center gap-5 text-sm bg-white lg:bg-transparent text-black lg:text-white p-3 lg:p-0 rounded-lg transition ease-in-out duration-300;
+}
+
+.navText {
+  @apply w-full lg:w-auto text-center font-bold lg:font-normal;
 }
 
 /*CONTAINER*/
@@ -172,7 +181,19 @@ body {
 }
 
 .containerGrp {
-  @apply flex flex-row justify-between items-center mt-5;
+  @apply flex flex-row justify-between gap-4 items-center mt-5;
+}
+
+.bookmark {
+  @apply hidden lg:block;
+}
+
+.btnBookmark {
+  @apply lg:hidden rounded-full scale-105 hover:scale-110 transition ease-in-out duration-300;
+}
+
+.btnHead {
+  @apply w-10/12 lg:w-auto text-white font-semibold bg-emerald-600 px-8 py-4 lg:py-2 rounded-full hover:scale-110 transition ease-in-out duration-300;
 }
 
 .btn {

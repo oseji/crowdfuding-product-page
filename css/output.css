@@ -585,8 +585,9 @@ video {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
 
 .border-y-2 {
@@ -594,9 +595,19 @@ video {
   border-bottom-width: 2px;
 }
 
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
 .border-slate-800 {
   --tw-border-opacity: 1;
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-4 {
@@ -628,11 +639,6 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-emerald-500 {
-  --tw-text-opacity: 1;
-  color: rgb(16 185 129 / var(--tw-text-opacity));
 }
 
 .text-slate-500 {
@@ -751,8 +757,10 @@ body {
 .enterPledge {
   margin-top: 1.25rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 1.25rem;
   border-top-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
@@ -764,8 +772,16 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-width: 1024px) {
+  .enterPledge {
+    flex-direction: row;
+    gap: 0px;
+  }
+}
+
 .pledgeSelection {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -783,9 +799,23 @@ body {
 }
 
 .titleGrp {
+  margin-bottom: 1rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.pledgeTitleGrp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .pledgeTitleGrp {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 
 .pledgeNum {
@@ -795,9 +825,14 @@ body {
 }
 
 .pledgeTitle {
-  margin-bottom: 1rem;
   cursor: pointer;
   font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .pledgeTitle {
+    margin-bottom: 1rem;
+  }
 }
 
 .pledgeAmount {
@@ -852,24 +887,27 @@ body {
   height: auto;
 }
 
-.close {
-  display: none;
+.closeNav {
+  height: 0px;
   overflow: hidden;
 }
 
 @media (min-width: 1024px) {
-  .close {
-    visibility: visible;
+  .closeNav {
+    height: auto;
   }
 }
 
+/*NAVBAR*/
+
 .navContainer {
   display: flex;
-  height: 10rem;
+  height: 16rem;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1.25rem;
   background-image: url('/images/image-hero-mobile.jpg');
   background-size: contain;
   background-size: cover;
@@ -877,16 +915,25 @@ body {
   background-repeat: no-repeat;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 @media (min-width: 1024px) {
   .navContainer {
+    height: 10rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
     background-image: url('/images/image-hero-desktop.jpg');
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
 .navbar {
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -896,10 +943,16 @@ body {
   padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 1024px) {
   .navbar {
+    width: auto;
     padding-left: 6rem;
     padding-right: 6rem;
     padding-top: 1.25rem;
@@ -909,6 +962,7 @@ body {
 
 .logoAndMenu {
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -918,6 +972,7 @@ body {
 
 @media (min-width: 1024px) {
   .logoAndMenu {
+    width: auto;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
@@ -939,15 +994,46 @@ body {
 
 .navList {
   display: flex;
+  width: 100%;
   flex-direction: column;
+  align-items: center;
   gap: 1.25rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 1024px) {
   .navList {
+    width: auto;
     flex-direction: row;
+    background-color: transparent;
+    padding: 0px;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+.navText {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .navText {
+    width: auto;
+    font-weight: 400;
   }
 }
 
@@ -993,6 +1079,74 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+}
+
+.bookmark {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .bookmark {
+    display: block;
+  }
+}
+
+.btnBookmark {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 9999px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnBookmark:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  .btnBookmark {
+    display: none;
+  }
+}
+
+.btnHead {
+  width: 83.333333%;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnHead:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  .btnHead {
+    width: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .btn {
