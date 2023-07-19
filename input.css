@@ -18,6 +18,7 @@ body {
   @apply bg-slate-200;
 }
 
+/*CLASSES*/
 .fade {
   @apply opacity-60;
 }
@@ -30,6 +31,101 @@ body {
   @apply h-auto overflow-visible transition ease-in-out duration-200;
 }
 
+.open {
+  @apply h-auto z-10;
+}
+
+.closeNav {
+  @apply h-0 lg:h-auto overflow-hidden;
+}
+
+/*NAVBAR*/
+.navContainer {
+  @apply flex flex-col lg:flex-row lg:justify-between justify-start gap-5 lg:gap-0 items-start bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-64 lg:h-64 w-full px-5 lg:px-24 py-5 lg:py-2 relative;
+}
+
+.navbar {
+  @apply w-full lg:w-auto flex flex-row  justify-between items-center px-5 py-2 lg:px-0 lg:py-5 text-white transition ease-in-out duration-300;
+}
+
+.logoAndMenu {
+  @apply w-full lg:w-auto flex flex-row justify-between items-center py-2 lg:py-5;
+}
+
+.navLogo {
+  @apply h-5;
+}
+
+.hamburger {
+  @apply h-4 lg:hidden;
+}
+
+.navList {
+  @apply w-full lg:w-auto flex flex-col lg:flex-row items-center gap-5 text-sm bg-white lg:bg-transparent text-black lg:text-white p-3 lg:p-0 rounded-lg transition ease-in-out duration-300;
+}
+
+.navText {
+  @apply w-full lg:w-auto text-center font-bold lg:font-normal;
+}
+
+/*CONTAINER*/
+.container {
+  @apply w-full lg:w-1/2 mx-auto p-5 relative bottom-20 lg:bottom-16;
+}
+
+.containerLogo {
+  @apply mx-auto relative bottom-16;
+}
+
+.subContainer {
+  @apply bg-white py-10 px-5 mb-6 rounded-lg;
+}
+
+.heading {
+  @apply font-bold mb-5;
+}
+
+.text {
+  @apply text-slate-400;
+}
+
+.containerGrp {
+  @apply flex flex-row justify-between gap-4 items-center mt-5;
+}
+
+.bookmark {
+  @apply hidden lg:block;
+}
+
+.btnBookmark {
+  @apply lg:hidden rounded-full scale-105 hover:scale-110 transition ease-in-out duration-300;
+}
+
+.btnHead {
+  @apply w-10/12 lg:w-auto text-white font-semibold bg-emerald-600 px-8 py-4 lg:py-2 rounded-full hover:scale-110 transition ease-in-out duration-300;
+}
+
+.btn {
+  @apply w-7/12 lg:w-auto text-white font-semibold bg-emerald-600 px-8 py-4 lg:py-2 rounded-full hover:scale-110 transition ease-in-out duration-300;
+}
+
+.numTable {
+  @apply flex flex-col lg:flex-row gap-5 mb-10 text-center;
+}
+
+.numGrp {
+  @apply px-7 py-5 lg:py-0;
+}
+
+.num {
+  @apply text-2xl font-bold;
+}
+
+.progressBar {
+  @apply h-4 w-full bg-slate-600 rounded-full;
+}
+
+/*MODAL*/
 #modal {
   @apply lg:w-1/2 p-7 rounded-lg;
 }
@@ -46,6 +142,10 @@ body {
   }
 }
 
+/*#modal::backdrop {
+  @apply bg-opacity-90;
+}*/
+
 .modalTitle {
   @apply font-bold text-xl;
 }
@@ -54,6 +154,20 @@ body {
   @apply h-4 cursor-pointer hover:scale-150 transition ease-in-out duration-300;
 }
 
+/*COMPLETED MODAL*/
+.completedModal {
+  @apply w-95/100 lg:w-1/3 p-7 rounded-lg;
+}
+
+.completedHeading {
+  @apply font-bold text-xl py-3 text-center;
+}
+
+.completedIcon {
+  @apply mx-auto pb-6 block;
+}
+
+/*PLEDGES*/
 .pledgeBox {
   @apply border rounded-lg p-5 mb-5;
 }
@@ -110,112 +224,7 @@ body {
   @apply mt-2 cursor-pointer;
 }
 
-.completedModal {
-  @apply w-95/100 lg:w-1/3 p-7 rounded-lg;
-}
-
-.completedHeading {
-  @apply font-bold text-xl py-3 text-center;
-}
-
-.completedIcon {
-  @apply mx-auto pb-6 block;
-}
-
-/*#modal::backdrop {
-  @apply bg-opacity-90;
-}*/
-
-.open {
-  @apply h-auto;
-}
-
-.closeNav {
-  @apply h-0 lg:h-auto overflow-hidden;
-}
-
-/*NAVBAR*/
-.navContainer {
-  @apply flex flex-col lg:flex-row lg:justify-between justify-start gap-5 lg:gap-0 items-start bg-bgMobile lg:bg-bgDesktop bg-contain bg-center bg-cover bg-no-repeat h-64 lg:h-40 w-full px-5 py-5 lg:py-2;
-}
-
-.navbar {
-  @apply w-full lg:w-auto flex flex-row  justify-between items-center px-5 py-2 lg:px-24 lg:py-5 text-white transition ease-in-out duration-300;
-}
-
-.logoAndMenu {
-  @apply w-full lg:w-auto flex flex-row justify-between items-center py-2 lg:py-5;
-}
-
-.navLogo {
-  @apply h-5;
-}
-
-.hamburger {
-  @apply h-4 lg:hidden;
-}
-
-.navList {
-  @apply w-full lg:w-auto flex flex-col lg:flex-row items-center gap-5 text-sm bg-white lg:bg-transparent text-black lg:text-white p-3 lg:p-0 rounded-lg transition ease-in-out duration-300;
-}
-
-.navText {
-  @apply w-full lg:w-auto text-center font-bold lg:font-normal;
-}
-
-/*CONTAINER*/
-.container {
-  @apply w-full lg:w-1/2 mx-auto p-5;
-}
-
-.subContainer {
-  @apply bg-white py-10 px-5 mb-6 rounded-lg;
-}
-
-.heading {
-  @apply font-bold mb-5;
-}
-
-.text {
-  @apply text-slate-400;
-}
-
-.containerGrp {
-  @apply flex flex-row justify-between gap-4 items-center mt-5;
-}
-
-.bookmark {
-  @apply hidden lg:block;
-}
-
-.btnBookmark {
-  @apply lg:hidden rounded-full scale-105 hover:scale-110 transition ease-in-out duration-300;
-}
-
-.btnHead {
-  @apply w-10/12 lg:w-auto text-white font-semibold bg-emerald-600 px-8 py-4 lg:py-2 rounded-full hover:scale-110 transition ease-in-out duration-300;
-}
-
-.btn {
-  @apply w-7/12 lg:w-auto text-white font-semibold bg-emerald-600 px-8 py-4 lg:py-2 rounded-full hover:scale-110 transition ease-in-out duration-300;
-}
-
-.numTable {
-  @apply flex flex-col lg:flex-row gap-5 mb-10 text-center;
-}
-
-.numGrp {
-  @apply px-7 py-5 lg:py-0;
-}
-
-.num {
-  @apply text-2xl font-bold;
-}
-
-.progressBar {
-  @apply h-4 w-full bg-slate-600 rounded-full;
-}
-
+/*REWARD BOXES*/
 .rewardBox {
   @apply border border-slate-400 rounded-lg p-5 mb-4;
 }
