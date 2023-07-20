@@ -67,12 +67,12 @@ check1.addEventListener("change", (e) => {
   if (e.target.checked) {
     console.log("just checked");
     enterPledge1.classList.toggle("reveal");
-    enterPledge1.classList.toggle("close");
+    enterPledge1.classList.toggle("closePledge");
     pledgeBox1.classList.toggle("pledgeBorderInactive");
     pledgeBox1.classList.toggle("pledgeBorderActive");
   } else {
     enterPledge1.classList.toggle("reveal");
-    enterPledge1.classList.toggle("close");
+    enterPledge1.classList.toggle("closePledge");
     pledgeBox1.classList.toggle("pledgeBorderInactive");
     pledgeBox1.classList.toggle("pledgeBorderActive");
   }
@@ -82,12 +82,12 @@ check2.addEventListener("change", (e) => {
   if (e.target.checked) {
     console.log("just checked");
     enterPledge2.classList.toggle("reveal");
-    enterPledge2.classList.toggle("close");
+    enterPledge2.classList.toggle("closePledge");
     pledgeBox2.classList.toggle("pledgeBorderInactive");
     pledgeBox2.classList.toggle("pledgeBorderActive");
   } else {
     enterPledge2.classList.toggle("reveal");
-    enterPledge2.classList.toggle("close");
+    enterPledge2.classList.toggle("closePledge");
     pledgeBox2.classList.toggle("pledgeBorderInactive");
     pledgeBox2.classList.toggle("pledgeBorderActive");
   }
@@ -97,12 +97,12 @@ check3.addEventListener("change", (e) => {
   if (e.target.checked) {
     console.log("just checked");
     enterPledge3.classList.toggle("reveal");
-    enterPledge3.classList.toggle("close");
+    enterPledge3.classList.toggle("closePledge");
     pledgeBox3.classList.toggle("pledgeBorderInactive");
     pledgeBox3.classList.toggle("pledgeBorderActive");
   } else {
     enterPledge3.classList.toggle("reveal");
-    enterPledge3.classList.toggle("close");
+    enterPledge3.classList.toggle("closePledge");
     pledgeBox3.classList.toggle("pledgeBorderInactive");
     pledgeBox3.classList.toggle("pledgeBorderActive");
   }
@@ -112,12 +112,12 @@ check4.addEventListener("change", (e) => {
   if (e.target.checked) {
     console.log("just checked");
     enterPledge4.classList.toggle("reveal");
-    enterPledge4.classList.toggle("close");
+    enterPledge4.classList.toggle("closePledge");
     pledgeBox4.classList.toggle("pledgeBorderInactive");
     pledgeBox4.classList.toggle("pledgeBorderActive");
   } else {
     enterPledge4.classList.toggle("reveal");
-    enterPledge4.classList.toggle("close");
+    enterPledge4.classList.toggle("closePledge");
     pledgeBox4.classList.toggle("pledgeBorderInactive");
     pledgeBox4.classList.toggle("pledgeBorderActive");
   }
