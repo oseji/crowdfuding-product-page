@@ -6,6 +6,13 @@ const closeModal = document.querySelector(".closeModal");
 const completedModal = document.querySelector(".completedModal");
 const btnComplete = document.getElementById("btnComplete");
 
+const moneyBacked = document.getElementById("moneyBacked");
+const numberBacked = document.getElementById("numberBacked");
+const daysLeft = document.getElementById("daysLeft");
+let money = 89914;
+let members = 5008;
+let days = 56;
+
 const check1 = document.getElementById("check1");
 const check2 = document.getElementById("check2");
 const check3 = document.getElementById("check3");
@@ -49,8 +56,8 @@ menuBtn.addEventListener("click", () => {
   navbar.classList.toggle("closeNav");
   navbar.classList.toggle("open");
 
-  menu.classList.toggle("closeNav");
-  menu.classList.toggle("open");
+  // menu.classList.toggle("closeNav");
+  // menu.classList.toggle("open");
 });
 
 //OPENING PLEDGE MODAL
@@ -124,18 +131,16 @@ check4.addEventListener("change", (e) => {
 });
 
 //SUBMITTING A PLEDGE TO REVEAL COMPLETED MODAL
-// btnPledge.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     completedModal.showModal();
-//   });
-// });
-
 btnPledge.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.id == "pledge25btn") {
       if (pledge25.value >= 25) {
+        money += Number(pledge25.value);
+        moneyBacked.textContent = `$${money.toLocaleString()}`;
+        numberBacked.textContent = members++;
         completedModal.showModal();
         pledge25.value = "";
+        //console.log(money);
       } else {
         alert("Must donate at least $25");
       }
@@ -143,6 +148,9 @@ btnPledge.forEach((btn) => {
 
     if (btn.id == "pledge75btn") {
       if (pledge75.value >= 75) {
+        money += Number(pledge75.value);
+        moneyBacked.textContent = `$${money.toLocaleString()}`;
+        numberBacked.textContent = members++;
         completedModal.showModal();
         pledge75.value = "";
       } else {
@@ -152,6 +160,9 @@ btnPledge.forEach((btn) => {
 
     if (btn.id == "pledge200btn") {
       if (pledge200.value >= 200) {
+        money += Number(pledge200.value);
+        moneyBacked.textContent = `$${money.toLocaleString()}`;
+        numberBacked.textContent = members++;
         completedModal.showModal();
         pledge200.value = "";
       } else {
@@ -161,6 +172,9 @@ btnPledge.forEach((btn) => {
 
     if (btn.id == "pledgeUnlimitedBtn") {
       if (pledgeUnlimited.value > 0) {
+        money += Number(pledgeUnlimited.value);
+        moneyBacked.textContent = `$${money.toLocaleString()}`;
+        numberBacked.textContent = members++;
         completedModal.showModal();
         pledgeUnlimited.value = "";
       } else {

@@ -45,7 +45,7 @@ body {
 }
 
 .navbar {
-  @apply w-full lg:w-auto flex flex-row  justify-between items-center px-5 py-2 lg:px-0 lg:py-5 text-white transition ease-in-out duration-300;
+  @apply w-full lg:w-auto flex flex-row  justify-between items-center px-5 py-0 lg:px-0 lg:py-5 text-white  transition-all ease-in-out duration-300;
 }
 
 .logoAndMenu {
@@ -61,7 +61,7 @@ body {
 }
 
 .navList {
-  @apply w-full lg:w-auto flex flex-col lg:flex-row items-center gap-5 text-sm bg-white lg:bg-transparent text-black lg:text-white p-3 lg:p-0 rounded-lg transition ease-in-out duration-300;
+  @apply w-full lg:w-auto flex flex-col lg:flex-row items-center gap-5 text-sm bg-white lg:bg-transparent text-black lg:text-white p-5 lg:p-0 rounded-lg transition ease-in-out duration-300 shadow-2xl shadow-black lg:shadow-none;
 }
 
 .navText {
